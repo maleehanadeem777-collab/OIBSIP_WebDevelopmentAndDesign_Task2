@@ -1,0 +1,436 @@
+/* ==========================================================================
+   1. PREMIUM TECH THEME VARIABLES & RESET
+   ========================================================================== */
+:root {
+    --bg-main: #0b0f19;         /* Core Dark Aesthetic */
+    --bg-card: #131a26;         /* Slightly lighter container grid boxes */
+    --neon-cyan: #00f2fe;       /* High energy futuristic turquoise */
+    --neon-dim: #0284c7;        /* Calmer tech blue */
+    --text-pure: #ffffff;
+    --text-slate: #94a3b8;
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-main);
+    color: var(--text-slate);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Common Layout Guardrails */
+section {
+    padding: 100px 8%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--text-pure);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    display: block;
+    text-align: center;
+    color: var(--neon-cyan);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.highlight {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+}
+
+/* Core Button Styles */
+.btn {
+    display: inline-block;
+    background-color: var(--neon-cyan);
+    color: var(--bg-main);
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 4px; /* Sharp technical edge style */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: var(--transition-smooth);
+    border: 1px solid var(--neon-cyan);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--neon-cyan);
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-pure);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: 15px;
+}
+
+.btn-outline:hover {
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+    box-shadow: none;
+}
+
+/* ==========================================================================
+   2. FIXED TOP NAVIGATION BAR
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.logo h2 {
+    color: var(--text-pure);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.logo h2 span {
+    color: var(--neon-cyan);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--text-slate);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+    color: var(--neon-cyan);
+}
+
+.btn-nav {
+    padding: 10px 22px;
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.btn-nav:hover {
+    background-color: var(--neon-cyan);
+    color: var(--bg-main);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+/* ==========================================================================
+   3. HERO PRODUCT SHOWCASE (Oasis & Synent Layout Requirements)
+   ========================================================================== */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1.2;
+}
+
+.tagline {
+    color: var(--neon-dim);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: var(--text-pure);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    color: var(--text-slate);
+}
+
+.hero-image-box {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Glowing Neon Ring Layout */
+.glowing-product-ring {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,242,254,0.1) 0%, transparent 70%);
+    border: 1px dashed rgba(0, 242, 254, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px rgba(0, 242, 254, 0.1);
+}
+
+.glowing-product-ring img {
+    width: 85%;
+    height: auto;
+    filter: drop-shadow(0 10px 25px rgba(0, 242, 254, 0.3));
+    animation: floatingProduct 4s ease-in-out infinite;
+}
+
+@keyframes floatingProduct {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* ==========================================================================
+   4. FEATURES 4-COLUMN GRID (Synent Grid Task Requirement)
+   ========================================================================== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: var(--transition-smooth);
+}
+
+.feature-card i {
+    font-size: 2.2rem;
+    color: var(--neon-cyan);
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    color: var(--text-pure);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+}
+
+/* Center Highlighted Grid Card */
+.highlighted-card {
+    border: 1px solid var(--neon-dim);
+    box-shadow: inset 0 0 20px rgba(2, 132, 199, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 15px 35px rgba(0, 242, 254, 0.12);
+}
+
+/* ==========================================================================
+   5. INTERACTIVE ACTION PRE-ORDER BANNER
+   ========================================================================== */
+.cta-section {
+    padding-bottom: 120px;
+}
+
+.cta-box {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.cta-box h2 {
+    color: var(--text-pure);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.cta-box p {
+    margin-bottom: 35px;
+    font-size: 1.1rem;
+}
+
+.subscribe-form {
+    display: flex;
+    max-width: 550px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    background-color: var(--bg-main);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 20px;
+    color: var(--text-pure);
+    font-family: var(--font-stack);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.subscribe-form input:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
+
+/* ==========================================================================
+   6. FOOTER SECTION & STUCTURE RESPONSIVENESS (No-Overlap Guard)
+   ========================================================================== */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 40px 5%;
+    text-align: center;
+    background-color: #080b12;
+    font-size: 0.9rem;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+/* Flawless Media Queries for Tablet/Mobile adaptation */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        padding-top: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        justify-content: center;
+    }
+
+    .glowing-product-ring {
+        width: 290px;
+        height: 290px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-outline {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/* Technical Specs Clean Layout Styling */
+.specs-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-row:last-child {
+    border-bottom: none; /* Last row borderless line */
+}
+
+.spec-label {
+    font-weight: 600;
+    color: var(--text-pure);
+}
+
+.spec-value {
+    color: var(--neon-cyan);
+    text-align: right;
+}
+
+@media (max-width: 500px) {
+    .spec-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .spec-value {
+        text-align: left;
+    }
+}

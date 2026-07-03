@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Matrix | Cloud Grid Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="app-bar">
+        <div class="app-logo">
+            <i class="fas fa-calculator"></i>
+            <h2>MN<span>.</span>Matrix</h2>
+        </div>
+        <div class="app-version">
+            <span class="status-dot"></span> Computational Core v3.0
+        </div>
+    </header>
+
+    <main class="app-main">
+        
+        <section class="description-panel">
+            <span class="tag">System Utility</span>
+            <h1>Virtual Matrix Calculator</h1>
+            <p>An interactive, high-precision web calculator built with pure JavaScript. It utilizes fluid mathematical evaluations to render immediate floating-point results inside a virtual matrix environment.</p>
+            
+            <div class="features-list">
+                <div class="feat-item">
+                    <i class="fas fa-microchip"></i>
+                    <span>Instant arithmetic state evaluation.</span>
+                </div>
+                <div class="feat-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Responsive grid interface designed for multi-device scalability.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-workspace">
+            <div class="calculator-card">
+                <div class="calc-brand">
+                    <span>MATRIX INTERFACE</span>
+                    <div class="pulse-indicator"></div>
+                </div>
+
+                <div class="calc-screen">
+                    <div id="previous-operand" class="previous-layer"></div>
+                    <div id="current-display" class="current-layer">0</div>
+                </div>
+
+                <div class="calc-buttons">
+                    <button onclick="clearScreen()" class="btn-action">AC</button>
+                    <button onclick="deleteNumber()" class="btn-action"><i class="fas fa-backspace"></i></button>
+                    <button onclick="appendOperator('%')" class="btn-action">%</button>
+                    <button onclick="appendOperator('/')" class="btn-operator">/</button>
+
+                    <button onclick="appendNumber('7')">7</button>
+                    <button onclick="appendNumber('8')">8</button>
+                    <button onclick="appendNumber('9')">9</button>
+                    <button onclick="appendOperator('*')" class="btn-operator">&times;</button>
+
+                    <button onclick="appendNumber('4')">4</button>
+                    <button onclick="appendNumber('5')">5</button>
+                    <button onclick="appendNumber('6')">6</button>
+                    <button onclick="appendOperator('-')" class="btn-operator">-</button>
+
+                    <button onclick="appendNumber('1')">1</button>
+                    <button onclick="appendNumber('2')">2</button>
+                    <button onclick="appendNumber('3')">3</button>
+                    <button onclick="appendOperator('+')" class="btn-operator">+</button>
+
+                    <button onclick="appendNumber('0')" class="btn-zero">0</button>
+                    <button onclick="appendNumber('.')">.</button>
+                    <button onclick="calculateResult()" class="btn-equals">=</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 MN Matrix Labs. Developed for Oasis Infobyte Front-End Submission.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

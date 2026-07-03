@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN ThermoStation | Advanced Temperature Web Utility</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="app-bar">
+        <div class="app-logo">
+            <i class="fas fa-layer-group"></i>
+            <h2>MN<span>.</span>Utilities</h2>
+        </div>
+        <div class="app-status">
+            <span class="status-dot"></span> Online Engine V2.1
+        </div>
+    </header>
+
+    <main class="app-container">
+        <section class="info-sidebar">
+            <span class="meta-tag">Documentation</span>
+            <h1>Thermodynamic Converter</h1>
+            <p>An authentic real-time mathematical utility built with pure vanilla JavaScript. It handles multi-directional state updates instantly with precise float restrictions.</p>
+            
+            <div class="formula-box">
+                <h4>Conversion Metrics</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <span>Celsius to Fahrenheit:</span> ( C * 9 / 5 ) + 32</li>
+                    <li><i class="fas fa-check-circle"></i> <span>Celsius to Kelvin:</span> C + 273.15</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="converter-workspace">
+            <div class="converter-card">
+                <div class="card-header">
+                    <i class="fas fa-temperature-high glow-icon"></i>
+                    <h3>Instant Processing Unit</h3>
+                    <p>Modify any parameter below to recalculate system states</p>
+                </div>
+
+                <div class="inputs-grid">
+                    <div class="input-wrapper">
+                        <label><i class="fas fa-thermometer-empty"></i> Celsius Scale</label>
+                        <div class="input-field-group">
+                            <input type="number" id="celsius" placeholder="0" step="any">
+                            <span class="unit-badge">°C</span>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label><i class="fas fa-thermometer-half"></i> Fahrenheit Scale</label>
+                        <div class="input-field-group">
+                            <input type="number" id="fahrenheit" placeholder="32" step="any">
+                            <span class="unit-badge">°F</span>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label><i class="fas fa-thermometer-full"></i> Kelvin Scale</label>
+                        <div class="input-field-group">
+                            <input type="number" id="kelvin" placeholder="273.15" step="any">
+                            <span class="unit-badge">K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="clear-btn" class="btn-clear-dash"><i class="fas fa-undo"></i> Reset Converter Matrix</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 MN Utilities. Handcrafted for Oasis Infobyte Assessment.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

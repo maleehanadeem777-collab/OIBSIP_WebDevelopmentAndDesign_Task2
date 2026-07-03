@@ -1,0 +1,270 @@
+:root {
+    --bg-dark-base: #070a12;
+    --bg-surface: rgba(19, 26, 38, 0.75);
+    --neon-cyan: #00f2fe;
+    --neon-magenta: #ff007f;
+    --text-high: #ffffff;
+    --text-low: #94a3b8;
+    --text-muted: #475569;
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg-dark-base);
+    color: var(--text-low);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 1. TOP NAVBAR / TITLE BAR */
+.app-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background-color: rgba(19, 26, 38, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+.app-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-high);
+}
+
+.app-logo i {
+    color: var(--neon-cyan);
+    font-size: 1.3rem;
+}
+
+.app-logo h2 span {
+    color: var(--neon-cyan);
+}
+
+.app-version {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-high);
+    background: rgba(255,255,255,0.03);
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--neon-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+/* 2. CORE WORKSPACE LAYOUT (Split Screen) */
+.app-main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex: 1;
+}
+
+/* Left Side Description Panel */
+.description-panel {
+    flex: 1.2;
+}
+
+.tag {
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.description-panel h1 {
+    font-size: 3rem;
+    color: var(--text-high);
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.description-panel p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feat-item i {
+    color: var(--neon-cyan);
+    font-size: 1.1rem;
+}
+
+/* Right Side Calculator Dock */
+.calculator-workspace {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-card {
+    background: var(--bg-surface);
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.calc-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.pulse-indicator {
+    width: 6px;
+    height: 6px;
+    background-color: var(--neon-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+/* Terminal Screen Display */
+.calc-screen {
+    background-color: rgba(7, 10, 18, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 25px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 242, 254, 0.1);
+}
+
+.previous-layer {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-family: monospace;
+    min-height: 20px;
+}
+
+.current-layer {
+    color: var(--text-high);
+    font-size: 2.2rem;
+    font-weight: 400;
+    font-family: monospace;
+}
+
+/* Keyboard System Grid */
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 16px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.btn-action {
+    color: var(--neon-magenta);
+}
+
+.btn-operator {
+    color: var(--neon-cyan);
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
+
+.btn-equals {
+    background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-magenta) 100%);
+    color: var(--bg-dark-base);
+    border: none;
+}
+
+.btn-equals:hover {
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+/* 3. APPLICATION FOOTER */
+.app-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    font-size: 0.85rem;
+    background-color: #04060b;
+}
+
+/* RESPONSIVE LAYOUT GUARD (No-Overlap Guard) */
+@media (max-width: 850px) {
+    .app-main {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px auto;
+        gap: 40px;
+    }
+    .description-panel h1 {
+        font-size: 2.2rem;
+    }
+    .feat-item {
+        justify-content: center;
+    }
+}
